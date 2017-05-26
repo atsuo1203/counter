@@ -7,26 +7,25 @@ class Counter extends React.Component {
     super(props);
     this.state = {value: 0};
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.minusValue = this.minusValue.bind(this);
+    this.pulusValue = this.pulusValue.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  minusValue(event) {
+      this.setState({value: this.state.value + -1});
   }
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+  pulusValue(event) {
+      this.setState({value: this.state.value + 1});
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form >
         <label>
-          <input type="submit" value="minus" />
-          <input disabled type="text" value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Plus" />
+          <input type="button" value="Minus" onClick={this.minusValue} />
+          <input disabled type="text" value={this.state.value} />
+          <input type="button" value="Plus" onClick={this.pulusValue} />
         </label>
       </form>
     );
