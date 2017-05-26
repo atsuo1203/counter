@@ -24,10 +24,10 @@ class Counter extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Counter:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="submit" value="minus" />
+          <input disabled type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="submit" value="Plus" />
         </label>
-        <input type="submit" value="Submit" />
       </form>
     );
   }
