@@ -8,7 +8,7 @@ class Counter extends React.Component {
     this.state = {value: 0};
 
     this.minusValue = this.minusValue.bind(this);
-    this.pulusValue = this.pulusValue.bind(this);
+    this.plusValue = this.plusValue.bind(this);
     this.clearValue = this.clearValue.bind(this);
   }
 
@@ -16,7 +16,7 @@ class Counter extends React.Component {
       this.setState({value: this.state.value + -1});
   }
 
-  pulusValue() {
+  plusValue() {
       this.setState({value: this.state.value + 1});
   }
 
@@ -30,7 +30,7 @@ class Counter extends React.Component {
         <label>
           <input type="button" value="Minus" onClick={this.minusValue} />
           <input disabled type="text" value={this.state.value} />
-          <input type="button" value="Plus" onClick={this.pulusValue} />
+          <input type="button" value="Plus" onClick={this.plusValue} />
         </label>
           <input type="button" value="Clear" onClick={this.clearValue} />
       </form>
