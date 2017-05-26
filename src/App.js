@@ -27,11 +27,9 @@ class Counter extends React.Component {
   render() {
     return (
       <form >
-        <label>
           <input type="button" value="Minus" onClick={this.minusValue} />
           <input disabled type="text" value={this.state.value} />
           <input type="button" value="Plus" onClick={this.plusValue} />
-        </label>
           <input type="button" value="Clear" onClick={this.clearValue} />
       </form>
     );
