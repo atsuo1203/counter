@@ -12,15 +12,15 @@ class Counter extends React.Component {
     this.clearValue = this.clearValue.bind(this);
   }
 
-  minusValue(event) {
+  minusValue() {
       this.setState({value: this.state.value + -1});
   }
 
-  pulusValue(event) {
+  pulusValue() {
       this.setState({value: this.state.value + 1});
   }
 
-  clearValue(event) {
+  clearValue() {
         this.setState({value: this.state.value = 0});
   }
 
