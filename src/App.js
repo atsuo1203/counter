@@ -26,7 +26,7 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <form >
+      <form className="app-form">
           <input type="button" value="Minus" onClick={this.minusValue} />
           <input disabled type="text" value={this.state.value} />
           <input type="button" value="Plus" onClick={this.plusValue} />
@@ -38,7 +38,7 @@ class Counter extends React.Component {
 class App extends Component {
   render() {
     return (
-        <div>
+        <div className="App">
             <Counter/>
         </div>
     );
