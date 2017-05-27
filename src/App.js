@@ -7,20 +7,26 @@ class Counter extends React.Component {
     super(props);
     this.state = {value: 0};
 
-    this.minusValue = this.minusValue.bind(this);
-    this.plusValue = this.plusValue.bind(this);
-    this.clearValue = this.clearValue.bind(this);
+    //本来はこれがないと動かない
+    // this.minusValue = this.minusValue.bind(this);
+    // this.plusValue = this.plusValue.bind(this);
+    // this.clearValue = this.clearValue.bind(this);
   }
 
-  minusValue() {
+  // 本来はこの書き方だけど下のように書き換えると上がいらない
+  // minusValue() {
+  //     this.setState({value: this.state.value + -1});
+  // }
+
+  minusValue = () => {
       this.setState({value: this.state.value + -1});
   }
 
-  plusValue() {
+  plusValue = ()  => {
       this.setState({value: this.state.value + 1});
   }
 
-  clearValue() {
+  clearValue = ()  => {
         this.setState({value: this.state.value = 0});
   }
 
